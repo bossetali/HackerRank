@@ -1,0 +1,34 @@
+void staircase(int n) {
+    
+    vector<string> holder;
+    for(int x=0; x<n;x++)
+    {
+        string word="";
+        for(int i=0;i<n;i++)
+        {
+            if(i>n-x-2)
+            {
+                word=word+"#";
+            }
+            else
+            {
+                word = word + " ";
+            }
+        }
+        holder.push_back(word);
+    }
+    
+    for (int y=0; y<holder.size();y++)
+    {
+        cout<<holder[y]<<endl;
+    }
+
+}
+
+// Use This code to make a staircase of Hash # that you input a number n into. 
+
+// EXAMPLE: IF n=3
+// Output:
+//"  #"
+//" ##"
+//"###"
