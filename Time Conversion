@@ -1,0 +1,45 @@
+// IF PROVIDED WITH A INPUT STRING OF hh:mm:ssAM or hh:mm:ssPM this will covert it to military time 
+
+
+string timeConversion(string s) 
+{
+    int w = s.size()-2;
+    char Time=s[w];
+    string last;
+    if(Time == 'A')
+    {
+        s[s.size()-1]=' ';
+        s[s.size()-2]=' ';
+        if(s[0]=='1'&&s[1]=='2')
+        {
+            s[0]='0';
+            s[1]='0';
+        }
+    }
+    else if(Time == 'P')
+    {
+        s[s.size()-1]=' ';
+        s[s.size()-2]=' ';
+        int num1=s[0];
+        int num2=s[1];
+        num1=num1-48;
+        num2=num2-48;
+
+        if(num1==1&&num2==2)
+        {
+            cout<<"wow much test"<<endl;
+        }
+        else
+        {
+            num1=num1+1;
+            num2=num2+2;
+            string str1=to_string(num1);
+            string str2=to_string(num2);
+            s[0]=str1[0];
+            s[1]=str2[0];
+            //cout<<num1<<num2<<endl<<str;
+        }
+    }
+    
+    return s;
+}
