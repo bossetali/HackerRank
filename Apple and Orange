@@ -1,0 +1,33 @@
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) 
+{
+    int app;
+    int orn;
+    int appcount=0;
+    int orncount=0;
+    
+    
+    for ( int i=0; i<apples.size();i++)
+    {
+        app=apples[i]+a;
+        
+        if(app>=s&&app<=t)
+        {
+            appcount++;
+        }
+    }
+    for ( int y=0; y<oranges.size();y++)
+    {
+        orn=oranges[y]+b;
+        
+        if(orn>=s&&orn<=t)
+        {
+            orncount++;
+        }
+    }
+    cout<<appcount<<endl<<orncount;
+
+   
+}
+
+//This solves if a something that falls a distance from point a is in between the points s and t. The number are given by vector<int> and the amount of points 
+// Are counted by appcount and orncount
